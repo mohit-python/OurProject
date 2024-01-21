@@ -1,11 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login-Page</title>
+  <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    <div style="background-color: red;height: 500px;">Sample</div>
+  <div class="navbar">
+    <img src="images/menu.png">
+    <div class="side-names">
+      <span>Home</span>
+      <span>About Us</span>
+      <span>Contact Us</span>
+      <img src="images/user.png">
+    </div>
+  </div>
+  <div class="main">
+    <div class="form">
+      <form>
+        <h1>Login</h1>
+        <div class="username">
+          <input type="email" placeholder="Username or Email"><img src="images/email.png">
+        </div>
+        <div class="password">
+          <input type="password" placeholder="Password" id="password"><img src="images/hidden.png" id="hidden-eye" >
+        </div>
+        <div class="sign-in">
+          <p>Forgot Password?</p>
+          <div class="sign-in-button">
+            <button>sign-in</button>
+          </div>
+        </div>
+        <div class="signUp">
+           <p>Don't have an account ?</p>
+           <a href="CreateAcc.html">sign-up</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+         let eye=document.getElementById("hidden-eye");
+         let password=document.getElementById("password");
+        eye.onclick=()=>{
+             if(password.type=="password"){
+                 password.type="text";
+                 eye.src="images/eye.png";
+                }
+              else {
+                password.type="password";
+                eye.src="images/hidden.png";
+              }
+        };
+  </script>
 </body>
+
 </html>
